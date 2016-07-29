@@ -1,0 +1,50 @@
+{
+  "name": "webpack-marionette-starter",
+  "version": "1.0.0",
+  "description": "webpack-marionette-starter",
+  "main": "app/js/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvmonroe/webpack-marionette-starter"
+  },
+  "scripts": {
+    "build:dev": "npm run clean && webpack-dev-server --config webpack.config.dev.js --progress --colors --inline --display-modules",
+    "build:staging:release": "npm run clean && webpack -p --config webpack.config.staging.js",
+    "clean": "rimraf public",
+    "lint": "eslint . || true"
+  },
+  "author": "Drew Monroe",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-es5": "^1.0.9",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-react": "^5.0.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "npm-install-webpack-plugin": "^3.1.1",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "text-loader": "0.0.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-s3-plugin": "^0.7.2"
+  },
+  "dependencies": {
+    "backbone": "1.2.3",
+    "backbone.marionette": "2.4.4",
+    "cutestrap": "^1.3.1",
+    "jquery": "^2.2.3",
+    "raw-loader": "^0.5.1",
+    "templates": "^0.20.2",
+    "underscore": "^1.8.3",
+    "views": "^1.0.2"
+  }
+}
